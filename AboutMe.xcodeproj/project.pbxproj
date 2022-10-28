@@ -13,6 +13,8 @@
 		A77D8EBE290C13F2000180A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77D8EBC290C13F2000180A1 /* Main.storyboard */; };
 		A77D8EC0290C13F4000180A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A77D8EBF290C13F4000180A1 /* Assets.xcassets */; };
 		A77D8EC3290C13F4000180A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A77D8EC1290C13F4000180A1 /* LaunchScreen.storyboard */; };
+		A77D8ED0290C1558000180A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D8ECF290C1558000180A1 /* User.swift */; };
+		A77D8ED3290C15BC000180A1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D8ED2290C15BC000180A1 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A77D8EBF290C13F4000180A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A77D8EC2290C13F4000180A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A77D8EC4290C13F4000180A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A77D8ECF290C1558000180A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		A77D8ED2290C15BC000180A1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,57 @@
 		A77D8EB5290C13F2000180A1 /* AboutMe */ = {
 			isa = PBXGroup;
 			children = (
-				A77D8EB6290C13F2000180A1 /* AppDelegate.swift */,
-				A77D8EB8290C13F2000180A1 /* SceneDelegate.swift */,
-				A77D8EBA290C13F2000180A1 /* ViewController.swift */,
-				A77D8EBC290C13F2000180A1 /* Main.storyboard */,
-				A77D8EBF290C13F4000180A1 /* Assets.xcassets */,
-				A77D8EC1290C13F4000180A1 /* LaunchScreen.storyboard */,
-				A77D8EC4290C13F4000180A1 /* Info.plist */,
+				A77D8ED1290C156B000180A1 /* Models */,
+				A77D8ECC290C1452000180A1 /* ViewControllers */,
+				A77D8ECE290C14AD000180A1 /* Storyboards */,
+				A77D8ECD290C1466000180A1 /* Resources */,
+				A77D8ECA290C1418000180A1 /* App */,
 			);
 			path = AboutMe;
+			sourceTree = "<group>";
+		};
+		A77D8ECA290C1418000180A1 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A77D8EB6290C13F2000180A1 /* AppDelegate.swift */,
+				A77D8EB8290C13F2000180A1 /* SceneDelegate.swift */,
+				A77D8EC4290C13F4000180A1 /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A77D8ECC290C1452000180A1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				A77D8EBA290C13F2000180A1 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		A77D8ECD290C1466000180A1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				A77D8EBF290C13F4000180A1 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		A77D8ECE290C14AD000180A1 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				A77D8EBC290C13F2000180A1 /* Main.storyboard */,
+				A77D8EC1290C13F4000180A1 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		A77D8ED1290C156B000180A1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A77D8ECF290C1558000180A1 /* User.swift */,
+				A77D8ED2290C15BC000180A1 /* Person.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,6 +184,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A77D8ED3290C15BC000180A1 /* Person.swift in Sources */,
+				A77D8ED0290C1558000180A1 /* User.swift in Sources */,
 				A77D8EBB290C13F2000180A1 /* ViewController.swift in Sources */,
 				A77D8EB7290C13F2000180A1 /* AppDelegate.swift in Sources */,
 				A77D8EB9290C13F2000180A1 /* SceneDelegate.swift in Sources */,
@@ -288,7 +336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMe/Info.plist;
+				INFOPLIST_FILE = AboutMe/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -301,9 +349,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DaniilKozlov.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -315,7 +366,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = AboutMe/Info.plist;
+				INFOPLIST_FILE = AboutMe/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -328,9 +379,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = DaniilKozlov.AboutMe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
