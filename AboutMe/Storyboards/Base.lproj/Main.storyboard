@@ -171,14 +171,40 @@
                     <view key="view" contentMode="scaleToFill" id="T7r-go-7OH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="xhR-MM-yUN">
+                                <rect key="frame" x="16" y="32" width="288" height="426"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_2022-10-30 16.43.46" translatesAutoresizingMaskIntoConstraints="NO" id="Er8-B8-2UL">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="178"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Er8-B8-2UL" secondAttribute="height" multiplier="144:89" id="JJ0-0j-Oux"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Копия IMG_9308" translatesAutoresizingMaskIntoConstraints="NO" id="ZjD-aW-Zfm">
+                                        <rect key="frame" x="0.0" y="210" width="288" height="216"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="ZjD-aW-Zfm" secondAttribute="height" multiplier="4:3" id="1mS-XL-De7"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="FiJ-8H-9uh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="xhR-MM-yUN" firstAttribute="top" secondItem="FiJ-8H-9uh" secondAttribute="top" constant="32" id="fcm-jT-k9k"/>
+                            <constraint firstItem="FiJ-8H-9uh" firstAttribute="trailing" secondItem="xhR-MM-yUN" secondAttribute="trailing" constant="16" id="jLK-yC-H4z"/>
+                            <constraint firstItem="FiJ-8H-9uh" firstAttribute="bottom" secondItem="xhR-MM-yUN" secondAttribute="bottom" constant="61" id="jin-8x-cyR"/>
+                            <constraint firstItem="xhR-MM-yUN" firstAttribute="centerX" secondItem="T7r-go-7OH" secondAttribute="centerX" id="s5E-cv-mxi"/>
+                            <constraint firstItem="xhR-MM-yUN" firstAttribute="leading" secondItem="FiJ-8H-9uh" secondAttribute="leading" constant="16" id="ubs-Pb-MnW"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Photos" image="person.crop.rectangle.stack.fill" catalog="system" id="Zie-AH-y8O"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Zl-Ek-5i0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3551" y="-2"/>
+            <point key="canvasLocation" x="3549.375" y="-2.112676056338028"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hYg-mv-cfR">
@@ -223,6 +249,8 @@
         <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
         <image name="person.crop.rectangle.stack.fill" catalog="system" width="128" height="122"/>
         <image name="person.text.rectangle.fill" catalog="system" width="128" height="93"/>
+        <image name="photo_2022-10-30 16.43.46" width="1280" height="960"/>
+        <image name="Копия IMG_9308" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
