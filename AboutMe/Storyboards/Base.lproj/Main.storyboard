@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login ScreenVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginScreenVC" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -24,7 +24,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-9Z-iy7">
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QBN-9Z-iy7">
                                         <rect key="frame" x="0.0" y="51" width="230" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -36,6 +36,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                 <connections>
+                                    <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="ESd-ZU-jdD"/>
                                     <segue destination="G9L-vM-oSf" kind="presentation" modalPresentationStyle="fullScreen" id="QDb-WC-lar"/>
                                 </connections>
                             </button>
@@ -46,11 +47,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="143.5" height="54.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Username"/>
+                                        <connections>
+                                            <action selector="forgotUserData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="COC-zY-wa4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oP1-wH-jii">
                                         <rect key="frame" x="144.5" y="0.0" width="143.5" height="54.5"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Forgot Password"/>
+                                        <connections>
+                                            <action selector="forgotUserData:" destination="BYZ-38-t0r" eventType="touchUpInside" id="YbP-Ii-knv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -68,6 +75,10 @@
                             <constraint firstItem="yxW-FE-scS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="zLG-VV-iKq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTF" destination="QBN-9Z-iy7" id="zMY-T0-bfA"/>
+                        <outlet property="usernameTF" destination="vZF-RV-Mlm" id="yA9-0c-RGt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -83,13 +94,13 @@
                         <viewLayoutGuide key="safeArea" id="d2f-Jv-Nkf"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Welcome" id="QXx-MB-Eaa"/>
+                    <tabBarItem key="tabBarItem" title="Welcome" image="door.left.hand.open" catalog="system" id="QXx-MB-Eaa"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsf-tC-bjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1517" y="-2"/>
         </scene>
-        <!--View Controller-->
+        <!--/(User)-->
         <scene sceneID="hcI-J0-Oj4">
             <objects>
                 <viewController id="Xg4-8r-1rH" sceneMemberID="viewController">
@@ -99,11 +110,11 @@
                         <viewLayoutGuide key="safeArea" id="5kr-9f-J1B"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="KEP-V5-bAn"/>
+                    <navigationItem key="navigationItem" title="/(User)" id="KEP-V5-bAn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1u2-wJ-5Ag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2987" y="-2"/>
+            <point key="canvasLocation" x="2878" y="-2"/>
         </scene>
         <!--Photos-->
         <scene sceneID="0eA-M2-EQx">
@@ -115,11 +126,11 @@
                         <viewLayoutGuide key="safeArea" id="FiJ-8H-9uh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Photos" id="Zie-AH-y8O"/>
+                    <tabBarItem key="tabBarItem" title="Photos" image="person.crop.rectangle.stack.fill" catalog="system" id="Zie-AH-y8O"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Zl-Ek-5i0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3666" y="-2"/>
+            <point key="canvasLocation" x="3551" y="-2"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="hYg-mv-cfR">
@@ -132,8 +143,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="tjX-2d-1pL" kind="relationship" relationship="viewControllers" id="08G-hO-51X"/>
-                        <segue destination="lYM-3f-roi" kind="relationship" relationship="viewControllers" id="F0s-zV-40H"/>
                         <segue destination="Hpv-8u-vka" kind="relationship" relationship="viewControllers" id="cWP-jb-qM4"/>
+                        <segue destination="lYM-3f-roi" kind="relationship" relationship="viewControllers" id="o9s-5N-num"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="En3-qX-ToQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -144,20 +155,26 @@
         <scene sceneID="FOH-4e-slu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hpv-8u-vka" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="About" id="60T-iG-4rk"/>
+                    <tabBarItem key="tabBarItem" title="About" image="person.text.rectangle.fill" catalog="system" id="60T-iG-4rk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cbt-L8-kQJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Xg4-8r-1rH" kind="relationship" relationship="rootViewController" id="MPw-jN-Yvk"/>
+                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nq-Ue-q6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2252" y="-2"/>
+            <point key="canvasLocation" x="2205" y="-2"/>
         </scene>
     </scenes>
     <resources>
+        <image name="door.left.hand.open" catalog="system" width="108" height="128"/>
+        <image name="person.crop.rectangle.stack.fill" catalog="system" width="128" height="122"/>
+        <image name="person.text.rectangle.fill" catalog="system" width="128" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
