@@ -99,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="30v-oZ-3NZ">
-                                <rect key="frame" x="120" y="80" width="80" height="288.5"/>
+                                <rect key="frame" x="120" y="80" width="80" height="184"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ht-NI-FOE">
                                         <rect key="frame" x="0.0" y="0.0" width="80" height="36"/>
@@ -113,16 +113,18 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMW-Rb-vix">
-                                        <rect key="frame" x="0.0" y="254" width="80" height="34.5"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Logout"/>
-                                        <connections>
-                                            <segue destination="miz-7O-3sP" kind="unwind" unwindAction="unwindWithSegue:" id="BJE-Ci-W8U"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lMW-Rb-vix">
+                                <rect key="frame" x="104" y="335" width="112" height="49"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Logout" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="29"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="miz-7O-3sP" kind="unwind" unwindAction="unwindWithSegue:" id="BJE-Ci-W8U"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d2f-Jv-Nkf"/>
                         <color key="backgroundColor" red="0.97058786730000002" green="1" blue="0.51389388889999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,6 +132,8 @@
                         <constraints>
                             <constraint firstItem="30v-oZ-3NZ" firstAttribute="top" secondItem="d2f-Jv-Nkf" secondAttribute="top" constant="80" id="AGm-x6-MfD"/>
                             <constraint firstItem="30v-oZ-3NZ" firstAttribute="leading" secondItem="d2f-Jv-Nkf" secondAttribute="leading" constant="120" id="Qe8-n0-TFw"/>
+                            <constraint firstItem="lMW-Rb-vix" firstAttribute="top" secondItem="sBN-ho-kVC" secondAttribute="bottom" constant="71" id="dRV-iG-1eB"/>
+                            <constraint firstItem="lMW-Rb-vix" firstAttribute="centerX" secondItem="sp1-br-qlU" secondAttribute="centerX" id="hjF-qp-B71"/>
                             <constraint firstItem="30v-oZ-3NZ" firstAttribute="centerX" secondItem="sp1-br-qlU" secondAttribute="centerX" id="isT-WH-dlz"/>
                             <constraint firstItem="d2f-Jv-Nkf" firstAttribute="trailing" secondItem="30v-oZ-3NZ" secondAttribute="trailing" constant="120" id="tTL-lE-hgE"/>
                         </constraints>
@@ -142,7 +146,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vsf-tC-bjW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="miz-7O-3sP" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1517" y="-2"/>
+            <point key="canvasLocation" x="1516.875" y="-2.112676056338028"/>
         </scene>
         <!--/(User)-->
         <scene sceneID="hcI-J0-Oj4">
