@@ -11,9 +11,8 @@ class LoginScreenVC: UIViewController {
     
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    
-    let user = "User"
-    let password = "Password"
+
+    let userData = User(person: daniil)
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
@@ -22,13 +21,18 @@ class LoginScreenVC: UIViewController {
         
         for viewController in tapBarVCArray {
             if let welcomeVC = viewController as? WelcomeVC {
-                welcomeVC.welcomeLabel.text = user
+                welcomeVC.userName = daniil.name
+                welcomeVC.userSurname = daniil.surname
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutUserVC = navigationVC.topViewController as! AboutMeViewController ??
+                print("Hello")
             }
-            // Сдвинулся
         }
     }
+//    else if let navigationVC = viewController as? UINavigationController {
+//    let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
             @IBAction func loginButtonPressed() {
-                if usernameTF.text != user || passwordTF.text != password {
+                if usernameTF.text != userData.login || passwordTF.text != userData.password {
                     showAlert(
                         title: "Invalid login or password",
                         message: "Please, enter correct login and password"
@@ -39,8 +43,8 @@ class LoginScreenVC: UIViewController {
             
             @IBAction func forgotUserData(_ sender: UIButton) {
                 sender.tag == 0
-                ? showAlert(title: "Oops!", message: "Your name is \(user)")
-                : showAlert(title: "Oops!", message: "Your password is \(password)")
+                ? showAlert(title: "Oops!", message: "Your name is \(userData.login)")
+                : showAlert(title: "Oops!", message: "Your password is \(userData.password)")
             }
             @IBAction func unwind(segue: UIStoryboardSegue) {
                 usernameTF.text = ""

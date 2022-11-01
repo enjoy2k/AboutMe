@@ -16,6 +16,7 @@
 		A77D8ED0290C1558000180A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D8ECF290C1558000180A1 /* User.swift */; };
 		A77D8ED3290C15BC000180A1 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D8ED2290C15BC000180A1 /* Person.swift */; };
 		A77D8ED5290EAA60000180A1 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D8ED4290EAA60000180A1 /* WelcomeVC.swift */; };
+		A77D8ED929115A82000180A1 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A77D8ED829115A82000180A1 /* AboutMeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		A77D8ECF290C1558000180A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A77D8ED2290C15BC000180A1 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		A77D8ED4290EAA60000180A1 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		A77D8ED829115A82000180A1 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			children = (
 				A77D8EBA290C13F2000180A1 /* LoginScreenVC.swift */,
 				A77D8ED4290EAA60000180A1 /* WelcomeVC.swift */,
+				A77D8ED829115A82000180A1 /* AboutMeViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			files = (
 				A77D8ED3290C15BC000180A1 /* Person.swift in Sources */,
 				A77D8ED0290C1558000180A1 /* User.swift in Sources */,
+				A77D8ED929115A82000180A1 /* AboutMeViewController.swift in Sources */,
 				A77D8EBB290C13F2000180A1 /* LoginScreenVC.swift in Sources */,
 				A77D8ED5290EAA60000180A1 /* WelcomeVC.swift in Sources */,
 				A77D8EB7290C13F2000180A1 /* AppDelegate.swift in Sources */,

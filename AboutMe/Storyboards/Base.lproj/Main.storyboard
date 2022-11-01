@@ -98,16 +98,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="70" translatesAutoresizingMaskIntoConstraints="NO" id="30v-oZ-3NZ">
-                                <rect key="frame" x="120" y="80" width="80" height="184"/>
+                                <rect key="frame" x="50" y="80" width="220" height="184"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ht-NI-FOE">
-                                        <rect key="frame" x="0.0" y="0.0" width="80" height="36"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ht-NI-FOE">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🤝" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sBN-ho-kVC">
-                                        <rect key="frame" x="0.0" y="106" width="80" height="78"/>
+                                        <rect key="frame" x="0.0" y="106" width="220" height="78"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="65"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -130,11 +130,11 @@
                         <accessibility key="accessibilityConfiguration" identifier="showWelcomeVC"/>
                         <constraints>
                             <constraint firstItem="30v-oZ-3NZ" firstAttribute="top" secondItem="d2f-Jv-Nkf" secondAttribute="top" constant="80" id="AGm-x6-MfD"/>
-                            <constraint firstItem="30v-oZ-3NZ" firstAttribute="leading" secondItem="d2f-Jv-Nkf" secondAttribute="leading" constant="120" id="Qe8-n0-TFw"/>
+                            <constraint firstItem="30v-oZ-3NZ" firstAttribute="leading" secondItem="d2f-Jv-Nkf" secondAttribute="leading" constant="50" id="Qe8-n0-TFw"/>
                             <constraint firstItem="lMW-Rb-vix" firstAttribute="top" secondItem="sBN-ho-kVC" secondAttribute="bottom" constant="71" id="dRV-iG-1eB"/>
                             <constraint firstItem="lMW-Rb-vix" firstAttribute="centerX" secondItem="sp1-br-qlU" secondAttribute="centerX" id="hjF-qp-B71"/>
                             <constraint firstItem="30v-oZ-3NZ" firstAttribute="centerX" secondItem="sp1-br-qlU" secondAttribute="centerX" id="isT-WH-dlz"/>
-                            <constraint firstItem="d2f-Jv-Nkf" firstAttribute="trailing" secondItem="30v-oZ-3NZ" secondAttribute="trailing" constant="120" id="tTL-lE-hgE"/>
+                            <constraint firstItem="d2f-Jv-Nkf" firstAttribute="trailing" secondItem="30v-oZ-3NZ" secondAttribute="trailing" constant="50" id="tTL-lE-hgE"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Welcome" image="door.left.hand.open" catalog="system" id="QXx-MB-Eaa"/>
@@ -147,18 +147,16 @@
             </objects>
             <point key="canvasLocation" x="1076" y="-2"/>
         </scene>
-        <!--/(User)-->
+        <!--\(user)-->
         <scene sceneID="hcI-J0-Oj4">
             <objects>
-                <viewController id="Xg4-8r-1rH" sceneMemberID="viewController">
+                <viewController id="Xg4-8r-1rH" customClass="AboutMeViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0km-Dc-Dmc">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uoS-cA-bp0">
-                                <rect key="frame" x="16" y="44" width="288" height="475"/>
-                                <mutableString key="text">Привет! Меня зовут Даниил, и мне 32 года!)
-С 2014 года я работаю фитнес -тренером. А в 2021, когда ко мне на тренировку пришёл парень занимающийся программированием, я задумался: "А почему я не могу стать программистом?" Я приобрёл себе ноутбук, и нашёл курс по Swift, потому что люблю пользоваться яблоками) Учиться программированию мне очень нравится!) Ещё больше нравится, когда то что я сделал, работает! Это очень приятное чувство) В связи с тем что я работаю, и тем что в семье появился ребёнок, а так же 2 собаки) , уделять много времени на учёбу не выходит. Я переживаю за то что не успею окончить курс вместе со своим потоком! Но даже если так, я всё равно закончу его изучение уже в одиночку. Я хочу сменить профессию, и рано- поздно я к этому приду!)</mutableString>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="uoS-cA-bp0">
+                                <rect key="frame" x="304" y="44" width="0.0" height="475"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -173,7 +171,7 @@
                             <constraint firstItem="uoS-cA-bp0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0km-Dc-Dmc" secondAttribute="leadingMargin" id="gcB-Sy-CNr"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="/(User)" id="KEP-V5-bAn"/>
+                    <navigationItem key="navigationItem" title="\(user)" id="KEP-V5-bAn"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1u2-wJ-5Ag" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

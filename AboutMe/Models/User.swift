@@ -6,7 +6,7 @@
 //
 
 struct User {
-    let login: String
-    let password: String
-    let person: Person?
+    let login = "User"
+    let password = "Password"
+    let person: Person
 }
