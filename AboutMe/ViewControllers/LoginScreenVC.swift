@@ -24,11 +24,13 @@ class LoginScreenVC: UIViewController {
                 welcomeVC.userName = daniil.name
                 welcomeVC.userSurname = daniil.surname
             } else if let navigationVC = viewController as? UINavigationController {
-                let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
-                aboutUserVC.aboutText = daniil.about
+                let aboutUserVC = navigationVC.topViewController as! TransferViewController
+//                aboutUserVC.aboutText = daniil.about
                 } 
             }
         }
+    
+// Нужно сделать . prepare() для трансфер логин скрина, чтобы передать туда данные с кнопки
             @IBAction func loginButtonPressed() {
                 if usernameTF.text != userData.login || passwordTF.text != userData.password {
                     showAlert(
