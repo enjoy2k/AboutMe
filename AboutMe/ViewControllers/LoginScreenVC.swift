@@ -26,8 +26,7 @@ class LoginScreenVC: UIViewController {
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! AboutMeViewController
                 aboutUserVC.aboutText = daniil.about
-                } // Осталось придумать что-нибудь с фотографиями. Может передать им название страницы, может добавить кнопок которые будут раскрывать ту или иную информацию. Ещё хочу сделать unwind чтобы из какого либо вью контроллера мне возвращалась какая-нибудь информация.
-                // Может открывать фотографии по фото. Можно сделать ещё один экран, для информации, какой-нибудь другой, например
+                } 
             }
         }
             @IBAction func loginButtonPressed() {

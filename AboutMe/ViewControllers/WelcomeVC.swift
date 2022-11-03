@@ -21,6 +21,3 @@ class WelcomeVC: UIViewController {
     }
 }
 
-/*
- На экран About я передам в тайтл person.name, а в лэйбл person.about
- */
