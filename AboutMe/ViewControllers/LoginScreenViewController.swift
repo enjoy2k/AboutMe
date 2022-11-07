@@ -12,7 +12,11 @@ class LoginScreenViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
 
-    let userData = User(person: daniil)
+//    private let userData = User(person: daniil) // Свойство обязательно должно быть приватным!
+    func daniilPerson() {
+        let danya = daniilPerson()
+    }
+    private let userData2 = User(danya) // Творю дичь. Продолжу отсюда
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
@@ -29,7 +33,6 @@ class LoginScreenViewController: UIViewController {
                 } 
             }
     
-// Нужно сделать . prepare() для трансфер логин скрина, чтобы передать туда данные с кнопки
             @IBAction func loginButtonPressed() {
                 if usernameTF.text != userData.login || passwordTF.text != userData.password {
                     showAlert(
