@@ -11,7 +11,9 @@ class TransferViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let navigationVC = segue.destination as? AboutMeViewController else { return }
+                navigationVC.aboutText = daniil.about
+    }
 }

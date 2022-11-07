@@ -17,7 +17,7 @@ class AboutMeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    
         userNameTitle.title = daniil.name
         aboutMeLabel.text = aboutText
     }

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginScreenVC: UIViewController {
+class LoginScreenViewController: UIViewController {
     
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
@@ -20,15 +20,14 @@ class LoginScreenVC: UIViewController {
         guard let tapBarVCArray = tabBarController.viewControllers else { return }
         
         for viewController in tapBarVCArray {
-            if let welcomeVC = viewController as? WelcomeVC {
+            if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userName = daniil.name
                 welcomeVC.userSurname = daniil.surname
-            } else if let navigationVC = viewController as? UINavigationController {
-                let aboutUserVC = navigationVC.topViewController as! TransferViewController
+            } //else if let navigationVC = viewController as? UINavigationController {
+//                let aboutUserVC = navigationVC.topViewController as! TransferViewController
 //                aboutUserVC.aboutText = daniil.about
                 } 
             }
-        }
     
 // Нужно сделать . prepare() для трансфер логин скрина, чтобы передать туда данные с кнопки
             @IBAction func loginButtonPressed() {
@@ -50,9 +49,9 @@ class LoginScreenVC: UIViewController {
                 usernameTF.text = ""
                 passwordTF.text = ""
             }
-        }
+}
 
-        extension LoginScreenVC {
+        extension LoginScreenViewController {
             private func showAlert(title: String, message: String) {
                 let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
                 let okAction = UIAlertAction(title: "Ok", style: .default)
@@ -61,7 +60,7 @@ class LoginScreenVC: UIViewController {
             }
         }
         
-        extension LoginScreenVC: UITextFieldDelegate {
+        extension LoginScreenViewController: UITextFieldDelegate {
             override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
                 super.touchesBegan(touches, with: event)
                 view.endEditing(true)
