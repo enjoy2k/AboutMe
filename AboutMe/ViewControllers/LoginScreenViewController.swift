@@ -12,11 +12,7 @@ class LoginScreenViewController: UIViewController {
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
 
-//    private let userData = User(person: daniil) // Свойство обязательно должно быть приватным!
-    func daniilPerson() {
-        let danya = daniilPerson()
-    }
-    private let userData2 = User(danya) // Творю дичь. Продолжу отсюда
+    private let userData = User(person: daniil)
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
