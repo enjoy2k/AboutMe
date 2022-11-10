@@ -8,8 +8,7 @@
 import UIKit
 
 class TransferViewController: UIViewController {
-    
-//    let daniil = Person(name: "Даниил", surname: "Козлов", about: "Привет!")
+
     let daniil = Person.getUserInfo()
     
     override func viewDidLoad() {
