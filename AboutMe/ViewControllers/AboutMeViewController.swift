@@ -13,13 +13,12 @@ class AboutMeViewController: UIViewController {
     
     @IBOutlet var aboutMeLabel: UILabel!
     
-    let daniil = Person.getUserInfo()
-    
     var aboutText = ""
+    var topLabel = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userNameTitle.title = daniil.name
+        userNameTitle.title = topLabel
         aboutMeLabel.text = aboutText
     }
 }

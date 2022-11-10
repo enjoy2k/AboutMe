@@ -13,7 +13,7 @@ class LoginScreenViewController: UIViewController {
     @IBOutlet var passwordTF: UITextField!
     
     let daniil = Person(name: "Даниил", surname: "Козлов", about: "Привет!")
-//    private lazy var userData = User(person: daniil)
+    //    private lazy var userData = User(person: daniil)
     private var userData: User {
         User(person: daniil)
     }
@@ -27,12 +27,13 @@ class LoginScreenViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userName = daniil.name
                 welcomeVC.userSurname = daniil.surname
-//            } else if let navigationVC = viewController as? UINavigationController {
-//                            let aboutUserVC = navigationVC.topViewController as! TransferViewController
-////                            aboutUserVC.aboutText = daniil
-                }
+            } else if let navigationVC = viewController as? UINavigationController {
+                let aboutUserVC = navigationVC.topViewController as! TransferViewController
+                aboutUserVC.
             }
         }
+    }
+
     
             @IBAction func loginButtonPressed() {
                 if usernameTF.text != userData.login || passwordTF.text != userData.password {

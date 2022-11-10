@@ -18,5 +18,6 @@ class TransferViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let aboutMeVC = segue.destination as? AboutMeViewController else { return }
         aboutMeVC.aboutText = daniil.about
+        aboutMeVC.topLabel = daniil.name
     }
 }
