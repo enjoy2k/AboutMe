@@ -11,8 +11,12 @@ class LoginScreenViewController: UIViewController {
     
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-
-    private let userData = User(person: daniil)
+    
+    let daniil = Person(name: "Даниил", surname: "Козлов", about: "Привет!")
+//    private lazy var userData = User(person: daniil)
+    private var userData: User {
+        User(person: daniil)
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
@@ -23,11 +27,12 @@ class LoginScreenViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userName = daniil.name
                 welcomeVC.userSurname = daniil.surname
-            } //else if let navigationVC = viewController as? UINavigationController {
-//                let aboutUserVC = navigationVC.topViewController as! TransferViewController
-//                aboutUserVC.aboutText = daniil.about
-                } 
+            } else if let navigationVC = viewController as? UINavigationController {
+                            let aboutUserVC = navigationVC.topViewController as! TransferViewController
+//                            aboutUserVC.aboutText = daniil
+                }
             }
+        }
     
             @IBAction func loginButtonPressed() {
                 if usernameTF.text != userData.login || passwordTF.text != userData.password {
