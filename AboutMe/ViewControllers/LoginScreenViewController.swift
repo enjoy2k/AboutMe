@@ -29,11 +29,11 @@ class LoginScreenViewController: UIViewController {
                 welcomeVC.userSurname = daniil.surname
             } else if let navigationVC = viewController as? UINavigationController {
                 let aboutUserVC = navigationVC.topViewController as! TransferViewController
-                aboutUserVC.daniil
+                
+            }
             }
         }
-    }
-
+    
     
             @IBAction func loginButtonPressed() {
                 if usernameTF.text != userData.login || passwordTF.text != userData.password {

@@ -20,4 +20,6 @@ class TransferViewController: UIViewController {
         aboutMeVC.aboutText = daniil.about
         aboutMeVC.topLabel = daniil.name
     }
+    @IBAction func showAboutMe() {
+    }
 }

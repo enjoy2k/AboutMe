@@ -163,6 +163,7 @@
                                     <fontDescription key="titleFontDescription" type="system" pointSize="18"/>
                                 </buttonConfiguration>
                                 <connections>
+                                    <action selector="showAboutMe" destination="hrD-Gl-aJe" eventType="touchUpInside" id="id8-EG-gdm"/>
                                     <segue destination="Xg4-8r-1rH" kind="show" id="PLJ-Of-ZSy"/>
                                 </connections>
                             </button>
@@ -300,7 +301,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="hrD-Gl-aJe" kind="show" identifier="aboutMeSegue" id="aWf-S8-RYP"/>
+                        <segue destination="hrD-Gl-aJe" kind="presentation" identifier="aboutMeSegue" modalPresentationStyle="automatic" id="aWf-S8-RYP"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4nq-Ue-q6h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
