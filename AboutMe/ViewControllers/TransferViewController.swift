@@ -8,12 +8,15 @@
 import UIKit
 
 class TransferViewController: UIViewController {
-
+    
+//    let daniil = Person(name: "Даниил", surname: "Козлов", about: "Привет!")
+    let daniil = Person.getUserInfo()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let navigationVC = segue.destination as? AboutMeViewController else { return }
-        navigationVC.aboutText = 
+        guard let aboutMeVC = segue.destination as? AboutMeViewController else { return }
+        aboutMeVC.aboutText = daniil.about
     }
 }

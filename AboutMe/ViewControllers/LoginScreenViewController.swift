@@ -27,9 +27,9 @@ class LoginScreenViewController: UIViewController {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.userName = daniil.name
                 welcomeVC.userSurname = daniil.surname
-            } else if let navigationVC = viewController as? UINavigationController {
-                            let aboutUserVC = navigationVC.topViewController as! TransferViewController
-//                            aboutUserVC.aboutText = daniil
+//            } else if let navigationVC = viewController as? UINavigationController {
+//                            let aboutUserVC = navigationVC.topViewController as! TransferViewController
+////                            aboutUserVC.aboutText = daniil
                 }
             }
         }
