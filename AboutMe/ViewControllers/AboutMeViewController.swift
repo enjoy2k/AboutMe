@@ -13,8 +13,8 @@ class AboutMeViewController: UIViewController {
     
     @IBOutlet var aboutMeLabel: UILabel!
     
-    var aboutText = ""
     var topLabel = ""
+    var aboutText = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()

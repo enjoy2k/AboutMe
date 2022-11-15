@@ -9,7 +9,7 @@ import UIKit
 
 class TransferViewController: UIViewController {
 
-    let daniil = Person.getUserInfo()
+    let daniil = Person.getUserInfo() // Вот здесь ошибка
     
     override func viewDidLoad() {
         super.viewDidLoad()

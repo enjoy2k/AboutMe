@@ -11,10 +11,9 @@ class LoginScreenViewController: UIViewController {
     
     @IBOutlet var usernameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
-    
-//    let daniil = Person(name: "Даниил", surname: "Козлов", about: "Привет!")
+
     let daniil = Person.getUserInfo()
-    //    private lazy var userData = User(person: daniil)
+    
     private var userData: User {
         User(person: daniil)
     }
@@ -34,7 +33,6 @@ class LoginScreenViewController: UIViewController {
             }
             }
         }
-    
     
             @IBAction func loginButtonPressed() {
                 if usernameTF.text != userData.login || passwordTF.text != userData.password {
