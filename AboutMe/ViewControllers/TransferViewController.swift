@@ -9,15 +9,16 @@ import UIKit
 
 class TransferViewController: UIViewController {
 
-    let daniil = Person.getUserInfo() // Вот здесь ошибка
+//    let daniil = Person.getUserInfo() // Вот здесь ошибка
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let aboutMeVC = segue.destination as? AboutMeViewController else { return }
-        aboutMeVC.aboutText = daniil.about
-        aboutMeVC.topLabel = daniil.name
+        aboutMeVC.aboutText = user.person.about
+        aboutMeVC.topLabel = user.person.fullName
     }
     @IBAction func showAboutMe() {
     }
